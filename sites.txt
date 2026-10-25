@@ -1,0 +1,24 @@
+# One site per line: group | organization | host
+# Lines starting with # are ignored. Keep the Control line: it shows whether the check itself works.
+Defence & security | Forsvaret | www.forsvaret.no
+Defence & security | FFI - Forsvarets forskningsinstitutt | www.ffi.no
+Defence & security | Forsvarsmateriell | www.fma.no
+Defence & security | Forsvarsbygg | www.forsvarsbygg.no
+Defence & security | NSM - Nasjonal sikkerhetsmyndighet | nsm.no
+Defence & security | PST | www.pst.no
+Defence & security | Politiet | www.politiet.no
+Defence & security | DSB - samfunnssikkerhet og beredskap | www.dsb.no
+Public services | Regjeringen | www.regjeringen.no
+Public services | Stortinget | www.stortinget.no
+Public services | NAV | www.nav.no
+Public services | Skatteetaten | www.skatteetaten.no
+Public services | Altinn | www.altinn.no
+Public services | ID-porten (login) | login.idporten.no
+Public services | Helsenorge | www.helsenorge.no
+Public services | Norge.no | www.norge.no
+Public services | Statens vegvesen | www.vegvesen.no
+Public services | Brønnøysundregistrene | www.brreg.no
+Public services | Digdir | www.digdir.no
+Public services | Nkom | www.nkom.no
+Public services | SSB | www.ssb.no
+Control | Cloudflare PQ test | pq.cloudflareresearch.com

@@ -1,0 +1,3 @@
+*.exe
+/pqcheck
+/pq_survey_*.csv
