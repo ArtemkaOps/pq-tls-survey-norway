@@ -26,15 +26,20 @@ Certificates are not validated, because the tool measures key exchange only. Apa
 - **Network owner is not the same as server operator.** An IP announced by a Norwegian ISP can still be operated by the agency itself, or by a supplier.
 - **Results depend on location and time.**
   - Some sites block cloud IP ranges: `www.norge.no` and `www.digdir.no` did not answer from Google Colab.
-  - CDN and cloud nodes may behave differently. `www.ssb.no` (Google Cloud load balancer, same IP) accepted `X25519MLKEM768` on 19 Oct (from Google Colab), 23 Oct and 25 Oct 11:22 (both from home), but refused it on 25 Oct 12:19 (from home).
+  - CDN and cloud nodes may behave differently. `www.ssb.no` (Google Cloud load balancer, same IP) accepted `X25519MLKEM768` in four runs: 19 Oct (from Google Colab), 23 Oct and 25 Oct 11:22 (both from home) and 26 Oct (from a school network). It refused it once, on 25 Oct 12:19 (from home).
 - **Antivirus software or firewalls that inspect HTTPS make the results describe the inspection device, not the website.** This is what the control host and the issuer check are for.
 - **The sample covers the 21 national public-sector websites in `sites.txt`.** It is a spot check (stikkprøve), not an assessment of any agency's overall security.
 
 ## Data
 
-`data/2026-10-25_home_state-sites.csv` comes from one run on 25 October 2026 at 12:19 from a residential internet connection in Norway, using pqcheck 1.3. It covers 21 national public-sector websites plus the control host.
+Two runs with pqcheck 1.3 from two different networks in Norway. Each covers 21 national public-sector websites plus the control host:
 
-Summary of that run:
+- `data/2026-10-25_home_state-sites.csv`: 25 October 2026, 12:19, residential internet connection.
+- `data/2026-10-26_school_state-sites.csv`: 26 October 2026, 09:46, school network.
+
+Both runs give the same result for all 21 sites except `www.ssb.no`, which accepted `X25519MLKEM768` from the school network. Certificate issuers were identical for every host in both runs, so neither network inspected HTTPS traffic.
+
+Summary of the 25 October run:
 
 | Group | Sites | Post-quantum key exchange | of them via cloud/CDN network | Terminating in a Norwegian network |
 |---|---|---|---|---|
